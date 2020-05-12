@@ -1,0 +1,27 @@
+//4/15/2020
+-added background changer
+-added node unblocker
+-added mirror unblocker
+-added cloak
+//
+
+//4/16/2020
+-added proxy domain list
+-added bookmarklet maker
+-added vip section
+//
+
+//4/17/2020
+-added vip chat to vip section
+//
+
+//5/10/2020
+-complete ui redesign for every page
+-added an arcade
+-added info page
+//
+
+//5/11/2020
+-added music player
+-changed text color on most pages
+//

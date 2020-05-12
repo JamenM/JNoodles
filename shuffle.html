@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JNoodles Music</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/99ad7e7a-2e8e-45f0-b5c7-eb8b56089de2%2Fztestfavicon.ico?v=1583104366962"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="shuffle.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&text=MUSIC"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="static/favicon.ico" />
+    <!-- JQuery and Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+      integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+      integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+<h1 style="color:yellow; font-size:25px;">
+  Play a Random Song From <m style="color:lime;">ALL</m> of <a href="https://www.youtube.com/" style="color:red">YouTube</a>
+    </h1>
+    <div class="container-fluid">
+      <div class="d-flex row justify-content-around align-items-center">
+        <button id="back" type="button" class="btn btn-default">
+          <i class="fa fa-step-backward" aria-hidden="true"></i>
+        </button>
+        <iframe
+          id="player"
+          width="853"
+          height="480"
+          src="about:blank"
+          allowfullscreen
+        >
+        </iframe>
+        <button id="forward" type="button" class="btn btn-default">
+          <i class="fa fa-step-forward" aria-hidden="true"></i>
+        </button>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <a href="https://github.com/amitness/shuffle/fork" style="color:lime">GitHub Repo
+        </a>
+      </div>
+    </div>
+    <script src="shuffle2.js" type="text/javascript"></script>
+    <script src="shuffle.js" type="text/javascript"></script>
+  </body>
+</html>

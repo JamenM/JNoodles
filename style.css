@@ -1,0 +1,82 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-image: url("https://cdn.glitch.com/00335b51-dc07-464d-b442-1d0af4585899%2Fspace2.jpg?v=1586631222055");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/*image rotator start*/
+img:hover {
+  animation: rotater 1s 1;
+}
+
+@keyframes rotater {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*image rotator end*/
+/*particles start*/
+#particles-js {
+  height: 94%;
+  position: absolute;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  z-index: 0;
+}
+/*particles end*/
+/*info start*/
+h1 {
+  color: lime;
+}
+/*typewriter start*/
+ @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+      p {
+        color: lime;
+      }
+      body {
+        \color: rgba(255, 255, 255, 0.75);
+        font-family: "Anonymous Pro", monospace;
+        background-color: rgb(25, 25, 25);
+      }
+      .line-1 {
+        position: relative;
+        width: 24em;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+        font-size: 180%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+      }
+
+      /* Animation */
+      .anim-typewriter {
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+          blinkTextCursor 500ms steps(44) infinite normal;
+      }
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 11.5em;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+        }
+        to {
+          border-right-color: transparent;
+        }
+      }
+/*typewriter end*/
