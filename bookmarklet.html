@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<index>
+  <head>
+    <title>Bookmarklet Maker</title>
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://cdn.glitch.com/00335b51-dc07-464d-b442-1d0af4585899%2Fspace2.jpg?v=1586631222055");
+      }
+
+      a {
+        text-decoration: none;
+      }
+      a[href]:link {
+        color: rgb(196, 69, 29);
+      }
+      a[href]:visited {
+        color: rgb(171, 105, 84);
+      }
+      a[href]:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        color: lime;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+      }
+
+      p {
+        color: lime;
+      }
+
+      body {
+        font: 13px/1.4 sans-serif;
+      }
+      #code-textarea {
+        font-size: 14px;
+        line-height: 20px;
+        height: 60px;
+        margin: 4px 0;
+        border: 1px solid #bbb;
+        padding: 4px 7px;
+        width: 600px;
+        height: 200px;
+        background-color: darkgray;
+      }
+
+      .output-textarea {
+        background-color: darkgray;
+        width: 725px;
+      }
+
+      a.bookmarklet,
+      a.button {
+        padding: 1px 6px;
+        color: black;
+        background: white;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+
+      #nodisc-ul {
+        list-style-type: none;
+      }
+
+      li {
+        display: block;
+        padding: 10px 20px;
+      }
+      label {
+        color: white;
+      }
+      b {
+        color: white;
+      }
+    </style>
+    <script>
+      function cleanCode(code) {
+        return code.trim();
+      }
+
+      function generateBookmarklet() {
+        var title = document.getElementById("title-input").value;
+        var code = document.getElementById("code-textarea").value;
+        var link = document.getElementById("bookmarklet-a");
+        var codeOutput = document.getElementById("output-textarea");
+        var htmlOuput = document.getElementById("htmlOuput-textarea");
+
+        var output =
+          "javascript:" +
+          encodeURIComponent("(function(){" + cleanCode(code) + "})();");
+
+        link.text = title;
+        link.href = output;
+        codeOutput.value = output;
+
+        htmlOuput.value = '<a href="' + output + '">' + title + "</a>";
+      }
+
+      function runCode() {
+        var code = document.getElementById("code-textarea").value;
+        eval(code);
+      }
+
+      function clearCode() {
+        document.getElementById("title-input").value = "bookmarklet";
+        document.getElementById("code-textarea").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="top.div">
+      <h1>Bookmarklet Maker</h1>
+    </div>
+
+    <div id="main.div">
+      <ul id="nodisc-ul">
+        <li>
+          <label>Title:</label>
+          <input id="title-input" value="bookmarklet" />
+        </li>
+        <li><label>Code</label></li>
+        <li><textarea id="code-textarea">alert('hello world');</textarea></li>
+        <li>
+          <button onclick="generateBookmarklet();">Generate Bookmarklet</button>
+          <button onclick="runCode();">Run Code</button>
+          <button onclick="clearCode();">Clear</button>
+        </li>
+        <li>
+          <b>Bookmaklet: </b
+          ><a id="bookmarklet-a" class="bookmarklet" href="">bookmarklet</a>
+        </li>
+        <li></li>
+        <li><b>Output:</b></li>
+        <li>
+          <textarea id="output-textarea" class="output-textarea"></textarea>
+        </li>
+      </ul>
+    </div>
+  </body>
+</index>

@@ -1,0 +1,16 @@
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid lime;
+  opacity: 0.8;
+  display: inline-block;
+}
+
